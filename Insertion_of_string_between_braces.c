@@ -20,6 +20,7 @@ int  brace(char *a, char *b, char *s)
 	for (length = 0; a[length]; length++);
 	if (length % 2 != 0)
 	{
+		return 1;
 	}
 	for (i = 0, j = length - 1;i<j; i++, j--)
 	{
