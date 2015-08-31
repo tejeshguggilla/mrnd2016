@@ -29,9 +29,10 @@ tuple(int a[], int n, int x) {
 		for (j = 0;j <= x;j++) {
 			if (s[j] == 1 && s[i] == 1 ) {
 				if (i >= j) {
-					if ((i + j) == x)
+					if ((i + j) == x){
 						printf("%d %d\n", i, j);
-					c++;
+						c++;
+					}
 				}
 			}
 		}
