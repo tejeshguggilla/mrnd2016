@@ -10,7 +10,7 @@ void main() {
 
 }
 common(char a[], char b[]) {
-	int x[26], i, j, k, z;
+	int x[26], i, j, k, z, count = 0;
 	for (i = 0;i < 26;i++) {
 		x[i] = 0;
 	}
@@ -30,13 +30,16 @@ common(char a[], char b[]) {
 		else if (b[i] < 97) {
 			z = b[i] - 65;
 		}
-		if (x[z] == 2 ) {}
+		if (x[z] == 2) {}
 		else if (x[z] == 1) {
 			x[z] = 2;
 		}
 	}
 	for (j = 0;j <26;j++) {
-		if (x[j] == 2)
-			printf("%c \t", j+97 );
+		if (x[j] == 2) {
+			printf("%c \t", j + 97);
+			count++;
+		}
 	}
+	if (count == 0)	printf("no character found \n");
 }
